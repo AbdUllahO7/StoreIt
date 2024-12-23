@@ -1,8 +1,10 @@
 
 export default function Home() {
   return (
-    <div>
-      <h1>Store It  - The only storage you need </h1>
+    <div className="flex-center h-screen">
+      <h1 className="h1">
+        Store It - The only storage you need
+        </h1>
     </div>
   
   );
