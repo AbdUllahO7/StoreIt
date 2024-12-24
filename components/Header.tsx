@@ -11,7 +11,7 @@ const Header = () => {
             <div className='header-wrapper'>
                 <FileUploader/>
                 <form action="">
-                    <button type='submit' className='sign-ouy-button'>
+                    <button type='submit' className='sign-out-button'>
                         <Image  
                             src = "assets/icons/logout.svg"
                             alt='logo'
