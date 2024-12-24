@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
@@ -23,9 +22,10 @@ interface Props  {
     fullName : string , 
     avatar : string ,
     email : string ,
-    ownerId : string
+    $id : string,
+    accountId : string,
 }
-const MobileNavigation = ({ownerId,fullName , avatar , email} : Props) => {
+const MobileNavigation = ({$id: ownerId , accountId ,fullName , avatar , email} : Props) => {
 
     const [open, setOpen] = useState(false)
     const pathname = usePathname();
@@ -86,7 +86,7 @@ const MobileNavigation = ({ownerId,fullName , avatar , email} : Props) => {
                 </nav>
                 <Separator className='my-5 bg-lime-200/20'/>
                 <div className='flex flex-col justify-between gap-5 pb-5'>
-                    <FileUploader/>
+                    <FileUploader ownerId={ownerId} accountId={accountId}/>
                     <button type='submit' className='mobile-sign-out-button' onClick={async()=>await signOutUser()}>
                         <Image  
                             src = "assets/icons/logout.svg"
