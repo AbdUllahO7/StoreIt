@@ -10,7 +10,7 @@ import Image from 'next/image';
 const ImageThumbnail = ({file} : {file : Models.Document}) => (
     <div className='file-details-thumbnail'>
         <Thumbnail type ={file.type} extension={file.extension} url = {file.url} />
-        <div className='flex flex-col'>
+        <div className='flex flex-col max-w-[200px]  line-clamp-1 '>
             <p className='subtitle-2 mb-1'>{file.name}</p>
             <FormattedDateTime date = {file.$createdAt} className='caption'/>
         </div>
